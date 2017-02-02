@@ -1,8 +1,8 @@
 <?php
 /**
- * _s Theme Customizer
+ * Jeffpack Theme Customizer
  *
- * @package _s
+ * @package jeffpack-theme
  */
 
 /**
