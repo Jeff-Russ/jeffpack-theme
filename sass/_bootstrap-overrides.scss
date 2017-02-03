@@ -1,3 +1,5 @@
+// NOTE: this file requires some sass variables: search for __
+
 .panel { border: none !important; box-shadow: 0 0px 10px rgba(0,0,0,0.40); }
 
 .panel-default > .panel-collapse > .panel-body, 
@@ -41,12 +43,12 @@
 .panel-primary > .panel-heading, 
 .panel-info > .panel-heading, 
 .panel-warning > .panel-heading {
-    background-image: url(/wp-content/themes/parchmentpaper/images/paper/paper-1.png) !important;
+    background-image: $image__background-paper !important;
 }
 .panel-success > .panel-heading, 
 .panel-danger > .panel-heading, 
 .panel-link > .panel-heading {
-    background-image: url(/wp-content/themes/parchmentpaper/images/paper/otis-redding.png) !important;
+    background-image: $image__background-content !important;
 }
 .panel-collapse, .panel-collapse > .panel-body { 
     -moz-border-radius: 0px 0px 4px 4px !important;
@@ -57,7 +59,7 @@
 .panel > .panel-collapse { border-top: none!important; }/* MUST be after .panel-default > .panel-collapse border*/
 .panel-body {
     background-color: #ddd6c0 !important;
-    background-image: url(/wp-content/themes/parchmentpaper/images/paper/otis-redding.png) !important;
+    background-image: $image__background-content !important;
 }
 .panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: none;
