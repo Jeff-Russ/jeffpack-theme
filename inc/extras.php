@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * Custom functions that act independently of the theme templates
  *
@@ -26,7 +27,7 @@ function _s_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', '_s_body_classes' );
+add_filter( 'body_class', '\Jr\_s_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
@@ -36,4 +37,4 @@ function _s_pingback_header() {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', '_s_pingback_header' );
+add_action( 'wp_head', '\Jr\_s_pingback_header' );

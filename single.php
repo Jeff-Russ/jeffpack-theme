@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * The template for displaying all single posts
  *

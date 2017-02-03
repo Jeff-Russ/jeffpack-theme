@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * Template part for displaying results in search pages
  *

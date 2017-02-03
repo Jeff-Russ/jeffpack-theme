@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * The main template file
  *

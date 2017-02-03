@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * Sample implementation of the Custom Header feature
  *
@@ -23,10 +24,10 @@ function _s_custom_header_setup() {
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => '_s_header_style',
+		'wp-head-callback'       => '\Jr\_s_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', '_s_custom_header_setup' );
+add_action( 'after_setup_theme', '\Jr\_s_custom_header_setup' );
 
 if ( ! function_exists( '_s_header_style' ) ) :
 /**

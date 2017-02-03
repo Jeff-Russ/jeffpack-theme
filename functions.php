@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * _s functions and definitions
  *
@@ -7,9 +8,7 @@
  * @package jeffpack-theme
  */
 
-
-// Exit if accessed directly
-if ( !defined( 'ABSPATH' ) ) exit;
+if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 if ( ! function_exists( '_s_setup' ) ) :
@@ -25,9 +24,9 @@ function _s_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the inc/languages/ directory.
 	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files.
+	 * to change 'Jr' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/inc/languages' );
+	load_theme_textdomain( 'Jr', get_template_directory() . '/inc/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +48,7 @@ function _s_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', '_s' ),
+		'menu-1' => esc_html__( 'Primary', 'Jr' ),
 	) );
 
 	/*
@@ -74,7 +73,7 @@ function _s_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', '_s_setup' );
+add_action( 'after_setup_theme', '\Jr\_s_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -84,9 +83,9 @@ add_action( 'after_setup_theme', '_s_setup' );
  * @global int $content_width
  */
 function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( '\Jr\_s_content_width', 640 );
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', '\Jr\_s_content_width', 0 );
 
 /**
  * Register widget area.
@@ -95,16 +94,16 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
  */
 function _s_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', '_s' ),
+		'name'          => esc_html__( 'Sidebar', 'Jr' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'description'   => esc_html__( 'Add widgets here.', 'Jr' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', '\Jr\_s_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -120,7 +119,7 @@ function _s_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', '\Jr\_s_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -158,10 +157,10 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 if ( !function_exists('enqueue_jquery_cdn') ){
-	add_action('wp_enqueue_scripts', 'enqueue_jquery_cdn');
+	add_action('wp_enqueue_scripts', '\Jr\enqueue_jquery_cdn');
 	function enqueue_jquery_cdn()
 	{ // https://css-tricks.com/snippets/wordpress/include-jquery-in-wordpress-theme/
-		if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+		if (!is_admin()) add_action("wp_enqueue_scripts", "\Jr\my_jquery_enqueue", 11);
 		function my_jquery_enqueue(){
 			wp_deregister_script('jquery');
 			wp_register_script('jquery',
@@ -176,7 +175,7 @@ if ( !function_exists('enqueue_jquery_cdn') ){
 // Add Bootstrap JS 
 if ( !function_exists('enqueue_bootstrap_js_cdn') ){
 	// toggle cdn option via comment/uncomment!
-	add_action('wp_enqueue_scripts', 'enqueue_bootstrap_js_cdn');
+	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_js_cdn');
 	function enqueue_bootstrap_js_cdn() {
 		wp_enqueue_script('bs-js',
 			'//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js',
@@ -185,7 +184,7 @@ if ( !function_exists('enqueue_bootstrap_js_cdn') ){
 }
 if ( !function_exists('enqueue_bootstrap_js_edit') ){
 	// toggle local edit option via comment/uncomment!
-	add_action('wp_enqueue_scripts', 'enqueue_bootstrap_js_edit');
+	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_js_edit');
 	function enqueue_bootstrap_js_edit(){
 		wp_enqueue_script('bs-js', get_stylesheet_directory_uri()
 			.'/assets/js/bootstraplet.js',array('jquery'), '', true );
@@ -195,7 +194,7 @@ if ( !function_exists('enqueue_bootstrap_js_edit') ){
 // Add Bootstrap CSS
 if ( !function_exists('enqueue_bootstrap_css_edit') ){
 	// toggle local edit option via comment/uncomment!
-	add_action('wp_enqueue_scripts', 'enqueue_bootstrap_css_edit');
+	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_css_edit');
 	function enqueue_bootstrap_css_edit(){
 		wp_enqueue_style('bs-css', get_stylesheet_directory_uri()
 			. '/assets/css/bootstraplet.css');
@@ -203,7 +202,7 @@ if ( !function_exists('enqueue_bootstrap_css_edit') ){
 }
 if ( !function_exists('enqueue_bootstrap_css_cdn') ){
 	// toggle cdn option via comment/uncomment! 
-	add_action('wp_enqueue_scripts', 'enqueue_bootstrap_css_cdn');
+	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_css_cdn');
 	function enqueue_bootstrap_css_cdn(){
 		wp_enqueue_style('bs-css',
 			'//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' );
@@ -218,11 +217,11 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ) {
 		wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array( 'genericons' ) );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
+add_action( 'wp_enqueue_scripts', '\Jr\chld_thm_cfg_parent_css', 10 );
 
 if ( !function_exists( 'child_theme_configurator_css' ) ) {
 	function child_theme_configurator_css() {
 		wp_enqueue_style( 'chld_thm_cfg_ext1', 'http://fonts.googleapis.com/css?family=Mate' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css' );
+add_action( 'wp_enqueue_scripts', '\Jr\child_theme_configurator_css' );

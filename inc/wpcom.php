@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * WordPress.com-specific functions and definitions
  *
@@ -26,4 +27,4 @@ function _s_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', '_s_wpcom_setup' );
+add_action( 'after_setup_theme', '\Jr\_s_wpcom_setup' );

@@ -1,4 +1,5 @@
 <?php
+namespace Jr;
 /**
  * The template for displaying the footer
  *
@@ -16,12 +17,12 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<!-- <a href=" -->
-				<?php //echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>
+				<?php //echo esc_url( __( 'https://wordpress.org/', 'Jr' ) ); ?>
 				<!-- "> -->
-				<?php //printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?>
+				<?php //printf( esc_html__( 'Proudly powered by %s', 'Jr' ), 'WordPress' ); ?>
 			<!-- </a> -->
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), 'Jeffpack', '<a href="https://github.com/Jeff-Russ/jeffpack-theme" rel="designer">Jeff Russ</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'Jr' ), 'Jeffpack', '<a href="https://github.com/Jeff-Russ/jeffpack-theme" rel="designer">Jeff Russ</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
