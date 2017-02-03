@@ -1,0 +1,90 @@
+
+// file added by Jeff-Russ
+
+
+.site-content {
+	padding-right: 0.5%;
+	padding-left: 2%;
+}
+
+.site-content {
+	background-color: $color__background-content;
+	padding-top: 1em;
+	background-image: $image__background-content;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
+	box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+
+.entry-title {
+	a { color: $color__link-dark; }
+	& a:hover, & a:focus { color: $color__background-ins; }
+
+}
+.entry-footer {
+	& a:hover, & a:focus { color: $color__background-ins; }
+}
+
+.sticky-post { }
+
+.page-header {
+	border-top: 1px solid $color__divider;
+}
+.page-title { }
+
+.page-links {
+	a, > span { border: 1px solid $color__border-input; }
+	a {
+		background-color: $color__text-main;
+		color: $color__background-ins;
+		:hover, :focus {
+			color: $color__button;
+		}
+	}
+	> .page-links-title { color: $color__text-main; }
+
+}
+
+.comments-title, .comment-reply-title {  border-top: 1px solid $color__divider; }
+.comment-author { color: $color__text-main; }
+
+.comment-metadata, .pingback .edit-link {}
+
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus {
+	color: $color__background-ins;
+}
+.comment-reply-link {
+	border: 1px solid $color__border-input;
+	color: $color__background-ins;
+	:hover, :focus { color: $color__background-ins; }
+
+}
+
+.comment-form label { }
+.no-comments { }
+.required { color: $color__link-dark; }
+
+.comment-reply-title {
+	& small a:hover,  & small a:focus { color: $color__button; }
+}
+
+/* cancel underline from twenty sixteen */
+.entry-content a{ box-shadow: none!important; }
+
+.entry-content h4, .entry-summary h4, .comment-content h4, .textwidget h4 {
+	letter-spacing: normal!important; /* cancel wide spacing from twenty sixteen */
+	text-transform: none;  /* cancel upcase from twenty sixteen */
+	margin-bottom: 0; /* cancel huge margin from twenty sixteen */
+}
+
+a:focus { outline: none; } /* cancel dotted box from twenty sixteen */

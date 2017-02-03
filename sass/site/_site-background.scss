@@ -1,0 +1,73 @@
+
+// file added by Jeff-Russ
+
+/*shamefully hosted by wordpress 
+a[href="https://wordpress.org/"] {
+	visibility: hidden!important; 
+	opacity: 0!important;
+	pointer-events: none;
+	cursor: default;
+	position: absolute!important;
+	width:0px!important;
+}
+*/
+
+.site {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.site-header {
+	padding: 1em 3%;
+}
+.site-branding {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	& .site-title a {
+		color: $color__background-content;
+		text-decoration: none;
+		&:visited, &:hover, &:focus { color: $color__background-content; }
+	}
+}
+.site-title {
+	font-size: 2rem;
+	font-family: $font__main;
+	font-weight: 900;
+}
+
+.site-description { color: $color__site-description; }
+.menu-toggle {
+	background-color: $color__background-content;
+	border: 1px solid $color__border-input;
+	color: $color__text-main;
+	&:hover, &:focus {
+		background-color: $color__background-input; // originally #eeefdb
+		color: $color__background-ins;
+	}
+	&.toggled-on, &.toggled-on:hover, &.toggled-on:focus {
+		background-color: $color__text-main;
+		color: $color__button;
+	}
+
+}
+
+.site-info {
+	a:hover, a:focus, { color: $color__background-ins; }
+}
+
+// .site-footer {
+//     .site-title:after { font-family: $font__main; }
+// }
+
+.entry-content .wp-smiley,
+.entry-summary .wp-smiley,
+.comment-content .wp-smiley,
+.textwidget .wp-smiley {
+	border: 1px solid $color__border-input;
+}
+
+.widecolumn {
+	.mu_register .mu_alert { background-color: $color__background-content; }
+	// label, .mu_register label { font-family: $font__main; }
+}
+

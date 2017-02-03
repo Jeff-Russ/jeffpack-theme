@@ -18,90 +18,143 @@
 			left: -999em;
 			z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
+			ul { left: -999em; top: 0; }
 			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
+				&:hover > ul, &.focus > ul { left: 100%; }
 			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
+			a { width: 200px; }
+			:hover > a, .focus > a { }
+			a:hover, a.focus { }
 		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
+		li:hover > ul, li.focus > ul { left: auto; }
 	}
 
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
+		&:hover > a, &.focus > a { }
 	}
+
+	.current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a { }
 
 	a {
-		display: block;
-		text-decoration: none;
+		display: block; text-decoration: none;
+		color: $color__background-content; // Jeff-Russ: to match other text over brown
+		:visited, :hover, :focus { color: $color__background-ins; } // added by Jeff-Russ
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+	.primary-menu { border-bottom: 1px solid $color__divider; } // added by Jeff-Russ
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+.menu-toggle, .main-navigation.toggled ul { display: block; }
 
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+	.menu-toggle { display: none; }
+	.main-navigation ul { display: block; }
 }
 
-.comment-navigation,
-.posts-navigation,
+.comment-navigation, .posts-navigation, .post-navigation {
+	.site-main & { margin: 0 0 1.5em; overflow: hidden; }
+	.nav-previous { float: left; width: 50%; }
+	.nav-next { float: right; text-align: right; width: 50%; }
+}
+
+// all below added by Jeff-Russ
+
+// .post-password-form label {}
+
+#menu-primary-menu {
+	border-bottom-color: $color__background-content; /* changed to match other text over brown */
+}
+
 .post-navigation {
+	// border-bottom: 1px solid $color__divider;
+	// border-top: 1px solid $color__divider;
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
+	a { color: $color__link-dark; }
+}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+.post-navigation a:hover .post-title, .post-navigation a:focus .post-title {
+	color: $color__background-ins;
+}
+// .post-navigation div + div {
+// 	border-top: 1px solid $color__divider;
+// }
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+
+.menu-item-has-children a:after,
+.social-navigation a:before,
+.dropdown-toggle:after,
+.bypostauthor > article .fn:after,
+.comment-reply-title small a:before,
+.pagination .prev:before,
+.pagination .next:before,
+.pagination .nav-links:before,
+.pagination .nav-links:after,
+.search-submit:before {
+	font-weight: 900;
+	font-style: bold;
+}
+
+
+.dropdown-toggle {
+	background-color: $color__background-content;
+	color: $color__text-main;
+
+	&:after { border: 1px solid $color__border-input; }
+	&:hover, &:focus {
+		background-color: $color__background-input-focus;
+		color: $color__background-ins;
 	}
 }
+
+
+.social-navigation a {
+	border: 1px solid $color__border-input;
+	color: $color__link-dark;
+}
+.social-navigation a:hover:before, .social-navigation a:focus:before {
+	color: $color__background-ins;
+}
+
+.pagination {
+	border-top: 1px solid $color__divider;
+
+	&:before, &:after {
+		background-color: $color__background-button;
+		border: 1px solid $color__border-button;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		-o-border-radius: 8px;
+		border-radius: 8px;
+	}
+	& a:hover, & a:focus { color: $color__button; }
+	&.nav-links:before, &.nav-links:after { color: $color__background-ins; }
+
+	&.prev, &.next {
+		background-color: $color__background-button;
+		color: $color__background-ins;
+	}
+	&.prev:hover, &.prev:focus, &.next:hover, &.next:focus {
+		background-color: $color__background-button-hover;
+		color: $color__button;
+	}
+
+}
+
+.image-navigation, .comment-navigation {
+	border-bottom: 1px solid $color__divider;
+}
+
+.site .skip-link {
+	background-color: rgba(73, 54, 49, 0); // this is just transparent
+}
+
+.logged-in .site .skip-link { }
+
+.tagcloud {
+	a { border: 1px solid $color__border-input; }
+	&:hover, &:focus { color: $color__background-ins; }
+}
+
+

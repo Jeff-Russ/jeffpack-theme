@@ -10,6 +10,7 @@ blockquote {
 	margin: 0 1.5em;
 }
 
+blockquote cite, blockquote small { color: $color__text-main; } // added by Jeff-Russ
 address {
 	margin: 0 0 1.5em;
 }
@@ -26,6 +27,7 @@ pre {
 }
 
 code, kbd, tt, var {
+	background-color: $color__background-pre; // added by Jeff-Russ
 	font-family: $font__code;
 	@include font-size(0.9375);
 }
@@ -43,3 +45,10 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+// below added by Jeff-Russ
+
+::-webkit-input-placeholder { font-family: $font__main; }
+:-moz-placeholder { font-family: $font__main; }
+::-moz-placeholder { font-family: $font__main; }
+:-ms-input-placeholder { font-family: $font__main; }

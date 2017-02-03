@@ -1,8 +1,36 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5em 0.4em;
+	padding-left: 0.4em;
+	border-top: 1px solid $color__text-main; // Jeff-Russ: added bar to separate entries
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+	ul {
+		padding-left: 1em;
+		font-size: 0.8em;
+	}
+}
+
+
+// below added by Jeff-Russ
+
+.widget .widget-title {
+    font-family: $font__main;
+}
+.widget-title a {
+    color: $color__link-dark;
+}
+.widget_calendar tbody a {
+    color: #4c85aa !important;
+}
+.widget_calendar tbody a:hover, .widget_calendar tbody a:focus {
+    color: #0a5575 !important;
+}
+.widget_recent_entries .post-date {
+    font-family: Mate !important;
+}
+.widget_rss .rss-date, .widget_rss cite {
+    font-family: Mate !important;
 }

@@ -1,0 +1,8 @@
+// file added by Jeff-Russ
+
+$path__theme : "/wp-content/themes/jeffpack-theme";
+$path__images : "#{$path__theme}/images";
+
+
+$image__background-body: url(#{$path__images}/pattern/skulls.png);
+$image__background-content: url(#{$path__images}/paper/otis-redding.png);

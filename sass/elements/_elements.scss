@@ -1,3 +1,4 @@
+
 html {
 	box-sizing: border-box;
 }
@@ -10,6 +11,7 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background-image: $image__background-body; // added by Jeff-Russ
 }
 
 blockquote, q {
@@ -19,6 +21,7 @@ blockquote, q {
 	&:after {
 		content: "";
 	}
+	border: 1px solid $color__border-input; // added by Jeff-Russ
 }
 
 hr {

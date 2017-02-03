@@ -5,6 +5,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="tel"],
+
 input[type="range"],
 input[type="date"],
 input[type="month"],
@@ -15,12 +16,14 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $color__text-input;
+	background-color: $color__background-input; // added by Jeff-Russ
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
 	padding: 3px;
 
 	&:focus {
 		color: $color__text-input-focus;
+		background-color: $color__background-input-focus;
 	}
 }
 
@@ -30,4 +33,10 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+// below added by Jeff-Russ
+
+fieldset {
+	border: 1px solid $color__text-main !important;
 }
