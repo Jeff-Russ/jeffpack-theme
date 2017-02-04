@@ -22,11 +22,11 @@ if ( ! function_exists( '_s_setup' ) ) :
 function _s_setup() {
 	/*
 	 * Make theme available for translation.
-	 * Translations can be filed in the inc/languages/ directory.
+	 * Translations can be filed in the lib/php/languages/ directory.
 	 * If you're building a theme based on _s, use a find and replace
 	 * to change 'Jr' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'Jr', get_template_directory() . '/inc/languages' );
+	load_theme_textdomain( 'Jr', get_template_directory() . '/lib/php/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -111,9 +111,9 @@ add_action( 'widgets_init', '\Jr\_s_widgets_init' );
 function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/lib/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/lib/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -124,27 +124,27 @@ add_action( 'wp_enqueue_scripts', '\Jr\_s_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/lib/php/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/lib/php/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/lib/php/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/lib/php/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/lib/php/jetpack.php';
 
 
 ////// Addded to _s ///////////////////////////////////////////////////////////
@@ -187,7 +187,7 @@ if ( !function_exists('enqueue_bootstrap_js_edit') ){
 	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_js_edit');
 	function enqueue_bootstrap_js_edit(){
 		wp_enqueue_script('bs-js', get_stylesheet_directory_uri()
-			.'/assets/js/bootstraplet.js',array('jquery'), '', true );
+			.'/lib/js/bootstraplet.js',array('jquery'), '', true );
 	}
 }
 
@@ -197,7 +197,7 @@ if ( !function_exists('enqueue_bootstrap_css_edit') ){
 	add_action('wp_enqueue_scripts', '\Jr\enqueue_bootstrap_css_edit');
 	function enqueue_bootstrap_css_edit(){
 		wp_enqueue_style('bs-css', get_stylesheet_directory_uri()
-			. '/assets/css/bootstraplet.css');
+			. '/lib/css/bootstraplet.css');
 	}
 }
 if ( !function_exists('enqueue_bootstrap_css_cdn') ){
