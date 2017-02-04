@@ -20,8 +20,6 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
-@import "bootstrap-overrides"; // added by Jeff-Russ
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -46,6 +44,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+/*------------------------------------------------------------*/
+
+
+@import "bootstrap-overrides"; // added by Jeff-Russ
+
 
 /*--------------------------------------------------------------
 # Normalize

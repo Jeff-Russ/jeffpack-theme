@@ -10,16 +10,16 @@ blockquote {
 	margin: 0 1.5em;
 }
 
-blockquote cite, blockquote small { color: $color__text-main; } // added by Jeff-Russ
+blockquote cite, blockquote small { color: $colorfg_main; } // added by Jeff-Russ
 address {
 	margin: 0 0 1.5em;
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
+	background: $colorbg_pre;
+	font-family: $font_pre;
 	@include font-size(0.9375);
-	line-height: $font__line-height-pre;
+	line-height: $font_line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -27,18 +27,18 @@ pre {
 }
 
 code, kbd, tt, var {
-	background-color: $color__background-pre; // added by Jeff-Russ
-	font-family: $font__code;
+	background-color: $colorbg_pre; // added by Jeff-Russ
+	font-family: $font_code;
 	@include font-size(0.9375);
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted $colorbd_abbr;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: $colorbg_ins;
 	text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ big {
 
 // below added by Jeff-Russ
 
-::-webkit-input-placeholder { font-family: $font__main; }
-:-moz-placeholder { font-family: $font__main; }
-::-moz-placeholder { font-family: $font__main; }
-:-ms-input-placeholder { font-family: $font__main; }
+::-webkit-input-placeholder { font-family: $font_main; }
+:-moz-placeholder { font-family: $font_main; }
+::-moz-placeholder { font-family: $font_main; }
+:-ms-input-placeholder { font-family: $font_main; }

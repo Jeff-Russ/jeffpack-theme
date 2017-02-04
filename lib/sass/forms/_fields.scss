@@ -15,20 +15,25 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	background-color: $color__background-input; // added by Jeff-Russ
-	border: 1px solid $color__border-input;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+	color: $colorfg_input;
+	background-color: $colorbg_input; // added by Jeff-Russ
+	border: 1px solid $colorbd_input;
 	border-radius: 3px;
-	padding: 3px;
+	// padding: 3px;
+	outline: none; // get rid of glow
 
 	&:focus {
-		color: $color__text-input-focus;
-		background-color: $color__background-input-focus;
+		color: $colorfg_input-focus;
+		background-color: $colorbg_input-focus;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $colorbd_input;
 }
 
 textarea {
@@ -38,5 +43,5 @@ textarea {
 // below added by Jeff-Russ
 
 fieldset {
-	border: 1px solid $color__text-main !important;
+	border: 1px solid $colorfg_main !important;
 }

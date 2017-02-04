@@ -1,7 +1,7 @@
 .widget {
-	margin: 0 0 1.5em 0.4em;
-	padding-left: 0.4em;
-	border-top: 1px solid $color__text-main; // Jeff-Russ: added bar to separate entries
+	margin: 0.3em;
+	padding: 0.4em 0 1em 0;
+	border-bottom: 1px solid $colorfg_main; // Jeff-Russ: added bar to separate entries
 
 	/* Make sure select elements fit in widgets. */
 	select {
@@ -17,10 +17,10 @@
 // below added by Jeff-Russ
 
 .widget .widget-title {
-    font-family: $font__main;
+    font-family: $font_main;
 }
 .widget-title a {
-    color: $color__link-dark;
+    color: $colorfg_a-dark;
 }
 .widget_calendar tbody a {
     color: #4c85aa !important;

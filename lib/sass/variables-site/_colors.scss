@@ -1,36 +1,36 @@
 
-$color__text-main: #493631;            // also blockquote
-$color__site-description: #b1a48e;
-$color__text-screen: $color__text-main;
-$color__text-input: $color__text-main;
-$color__text-input-focus: $color__text-main;
-$color__link-dark: #004557;    // Jeff-Russ: dark blue links over dark brown backgrounds
-$color__link: #076077;
-$color__link-visited: $color__link;
-$color__link-hover: $color__link;
-$color__button: #0a5575;
+$colorfg_main: #493631;            // also blockquote
+$colorfg_site-description: #b1a48e;
+$colorfg_screen: $colorfg_main;
+$colorfg_input: $colorfg_main;
+$colorfg_input-focus: $colorfg_main;
+$colorfg_a-dark: #004557;    // Jeff-Russ: dark blue links over dark brown backgrounds
+$colorfg_a: #076077;
+$colorfg_a-visited: $colorfg_a;
+$colorfg_a-hover: $colorfg_a;
+$colorfg_button: #0a5575;
 
-$color__background-body: $color__text-main;  // Fallback for when there is no custom background color defined.
-$color__background-content: #ddd3b6;
+$colorbg_body: $colorfg_main;  // Fallback for when there is no custom background color defined.
+$colorbg_content: #ddd3b6;
 
-$color__tint-content: adjust-hue($color__background-content, -10deg);
+$color__tint-content: adjust-hue($colorbg_content, -10deg); // delete this later
 
-$color__background-input: #eee9db;
-$color__background-input-focus: tint($color__background-input, 10%);
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: rgba(108, 173, 200, 0);
-$color__background-button-hover: rgba($color__background-button, 0.1);
-$color__background-pre: #cbc8be;
-$color__background-ins: #4c85aa; // also .post-navigation a:hover .post-title, .post-navigation a:focus .post-title 
+$colorbg_input: #eee9db;
+$colorbg_input-focus: tint($colorbg_input, 10%);
+$colorbg_screen: #f1f1f1;
+$colorbg_hr: #ccc;
+$colorbg_button: rgba(108, 173, 200, 0);
+$colorbg_button-hover: rgba($colorbg_button, 0.1);
+$colorbg_pre: #cbc8be;
+$colorbg_ins: #4c85aa; // also .post-navigation a:hover .post-title, .post-navigation a:focus .post-title 
 
-$color__border-button: rgba(73, 54, 49, 0.5);
-$color__border-button-hover: tint($color__button 10%);
-$color__border-button-focus: $color__border-button-hover;
+$colorbd_button: rgba(73, 54, 49, 0.5);
+$colorbd_button-hover: tint($colorfg_button 10%);
+$colorbd_button-focus: $colorbd_button-hover;
 
-$color__border-input: #b6b3a3; // also pre border and tagcloud links
-$color__border-abbr: #666;
+$colorbd_input: #b6b3a3; // also pre border and tagcloud links
+$colorbd_abbr: #666;
 
-$color__divider: #4d5a68; // added by Jeff-Russ
+$colorhr: #4d5a68; // added by Jeff-Russ
 
 

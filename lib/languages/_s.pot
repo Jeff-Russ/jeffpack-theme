@@ -103,14 +103,14 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/template-tags.php:28
+#: lib/php/template-tags.php:28
 #, php-format
 #@ jeffpack-theme
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:33
+#: lib/php/template-tags.php:33
 #, php-format
 #@ jeffpack-theme
 msgctxt "post author"
@@ -118,42 +118,42 @@ msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:50
-#: inc/template-tags.php:56
+#: lib/php/template-tags.php:50
+#: lib/php/template-tags.php:56
 #@ jeffpack-theme
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:52
+#: lib/php/template-tags.php:52
 #, php-format
 #@ jeffpack-theme
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:58
+#: lib/php/template-tags.php:58
 #, php-format
 #@ jeffpack-theme
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:65
+#: lib/php/template-tags.php:65
 #@ jeffpack-theme
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:65
+#: lib/php/template-tags.php:65
 #@ jeffpack-theme
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:65
+#: lib/php/template-tags.php:65
 #@ jeffpack-theme
 msgid "% Comments"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:71
-#: template-parts/content-page.php:33
+#: lib/php/template-tags.php:71
+#: lib/css/template-parts/content-page.php:33
 #, php-format
 #@ jeffpack-theme
 msgid "Edit %s"
@@ -165,35 +165,35 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:14
+#: lib/css/template-parts/content-none.php:14
 #@ jeffpack-theme
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:21
+#: lib/css/template-parts/content-none.php:21
 #, php-format
 #@ jeffpack-theme
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:25
+#: lib/css/template-parts/content-none.php:25
 #@ jeffpack-theme
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:31
+#: lib/css/template-parts/content-none.php:31
 #@ jeffpack-theme
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22
-#: template-parts/content.php:38
+#: lib/css/template-parts/content-page.php:22
+#: lib/css/template-parts/content.php:38
 #@ jeffpack-theme
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. 
-#: template-parts/content.php:33
+#: lib/css/template-parts/content.php:33
 #, php-format
 #@ jeffpack-theme
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"

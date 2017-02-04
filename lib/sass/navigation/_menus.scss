@@ -39,10 +39,10 @@
 
 	a {
 		display: block; text-decoration: none;
-		color: $color__background-content; // Jeff-Russ: to match other text over brown
-		:visited, :hover, :focus { color: $color__background-ins; } // added by Jeff-Russ
+		color: $colorbg_content; // Jeff-Russ: to match other text over brown
+		:visited, :hover, :focus { color: $colorbg_ins; } // added by Jeff-Russ
 	}
-	.primary-menu { border-bottom: 1px solid $color__divider; } // added by Jeff-Russ
+	.primary-menu { border-bottom: 1px solid $colorhr; } // added by Jeff-Russ
 }
 
 /* Small menu. */
@@ -64,21 +64,21 @@
 // .post-password-form label {}
 
 #menu-primary-menu {
-	border-bottom-color: $color__background-content; /* changed to match other text over brown */
+	border-bottom-color: $colorbg_content; /* changed to match other text over brown */
 }
 
 .post-navigation {
-	// border-bottom: 1px solid $color__divider;
-	// border-top: 1px solid $color__divider;
+	// border-bottom: 1px solid $colorhr;
+	// border-top: 1px solid $colorhr;
 
-	a { color: $color__link-dark; }
+	a { color: $colorfg_a-dark; }
 }
 
 .post-navigation a:hover .post-title, .post-navigation a:focus .post-title {
-	color: $color__background-ins;
+	color: $colorbg_ins;
 }
 // .post-navigation div + div {
-// 	border-top: 1px solid $color__divider;
+// 	border-top: 1px solid $colorhr;
 // }
 
 
@@ -98,52 +98,52 @@
 
 
 .dropdown-toggle {
-	background-color: $color__background-content;
-	color: $color__text-main;
+	background-color: $colorbg_content;
+	color: $colorfg_main;
 
-	&:after { border: 1px solid $color__border-input; }
+	&:after { border: 1px solid $colorbd_input; }
 	&:hover, &:focus {
-		background-color: $color__background-input-focus;
-		color: $color__background-ins;
+		background-color: $colorbg_input-focus;
+		color: $colorbg_ins;
 	}
 }
 
 
 .social-navigation a {
-	border: 1px solid $color__border-input;
-	color: $color__link-dark;
+	border: 1px solid $colorbd_input;
+	color: $colorfg_a-dark;
 }
 .social-navigation a:hover:before, .social-navigation a:focus:before {
-	color: $color__background-ins;
+	color: $colorbg_ins;
 }
 
 .pagination {
-	border-top: 1px solid $color__divider;
+	border-top: 1px solid $colorhr;
 
 	&:before, &:after {
-		background-color: $color__background-button;
-		border: 1px solid $color__border-button;
+		background-color: $colorbg_button;
+		border: 1px solid $colorbd_button;
 		-moz-border-radius: 8px;
 		-webkit-border-radius: 8px;
 		-o-border-radius: 8px;
 		border-radius: 8px;
 	}
-	& a:hover, & a:focus { color: $color__button; }
-	&.nav-links:before, &.nav-links:after { color: $color__background-ins; }
+	& a:hover, & a:focus { color: $colorfg_button; }
+	&.nav-links:before, &.nav-links:after { color: $colorbg_ins; }
 
 	&.prev, &.next {
-		background-color: $color__background-button;
-		color: $color__background-ins;
+		background-color: $colorbg_button;
+		color: $colorbg_ins;
 	}
 	&.prev:hover, &.prev:focus, &.next:hover, &.next:focus {
-		background-color: $color__background-button-hover;
-		color: $color__button;
+		background-color: $colorbg_button-hover;
+		color: $colorfg_button;
 	}
 
 }
 
 .image-navigation, .comment-navigation {
-	border-bottom: 1px solid $color__divider;
+	border-bottom: 1px solid $colorhr;
 }
 
 .site .skip-link {
@@ -153,8 +153,8 @@
 .logged-in .site .skip-link { }
 
 .tagcloud {
-	a { border: 1px solid $color__border-input; }
-	&:hover, &:focus { color: $color__background-ins; }
+	a { border: 1px solid $colorbd_input; }
+	&:hover, &:focus { color: $colorbg_ins; }
 }
 
 

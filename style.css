@@ -16,6 +16,29 @@
  Normalizing styles have been helped along thanks to the fine work of
  Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
  */
+/*--------------------------------------------------------------
+ >>> TABLE OF CONTENTS:
+ ----------------------------------------------------------------
+ # Normalize
+ # Typography
+ # Elements
+ # Forms
+ # Navigation
+ ## Links
+ ## Menus
+ # Accessibility
+ # Alignments
+ # Clearings
+ # Widgets
+ # Content
+ ## Posts and pages
+ ## Comments
+ # Infinite scroll
+ # Media
+ ## Captions
+ ## Galleries
+ --------------------------------------------------------------*/
+/*------------------------------------------------------------*/
 .panel {
   border: none !important;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.40);
@@ -70,10 +93,10 @@
   box-shadow: inset 0px 5px 5px 0px #c7d6d0;
 }
 .panel-default > .panel-heading, .panel-primary > .panel-heading, .panel-info > .panel-heading, .panel-warning > .panel-heading {
-  background-image: url(/wp-content/themes/parchmentpaper/assets/images/paper/paper-1.png) !important;
+  background-image: url(/wp-content/themes/jeffpack-theme/lib/images/paper/paper-1.png) !important;
 }
 .panel-success > .panel-heading, .panel-danger > .panel-heading, .panel-link > .panel-heading {
-  background-image: url(/wp-content/themes/parchmentpaper/assets/images/paper/otis-redding.png) !important;
+  background-image: url(/wp-content/themes/jeffpack-theme/lib/images/paper/otis-redding.png) !important;
 }
 .panel-collapse, .panel-collapse > .panel-body {
   -moz-border-radius: 0px 0px 4px 4px !important;
@@ -87,33 +110,11 @@
 /* MUST be after .panel-default > .panel-collapse border*/
 .panel-body {
   background-color: #ddd6c0 !important;
-  background-image: url(/wp-content/themes/parchmentpaper/assets/images/paper/otis-redding.png) !important;
+  background-image: url(/wp-content/themes/jeffpack-theme/lib/images/paper/otis-redding.png) !important;
 }
 .panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
 }
-/*--------------------------------------------------------------
- >>> TABLE OF CONTENTS:
- ----------------------------------------------------------------
- # Normalize
- # Typography
- # Elements
- # Forms
- # Navigation
- ## Links
- ## Menus
- # Accessibility
- # Alignments
- # Clearings
- # Widgets
- # Content
- ## Posts and pages
- ## Comments
- # Infinite scroll
- # Media
- ## Captions
- ## Galleries
- --------------------------------------------------------------*/
 /*--------------------------------------------------------------
  # Normalize
  --------------------------------------------------------------*/
@@ -335,7 +336,7 @@ html {
 body {
   background: #493631;
   /* Fallback for when there is no custom background color defined. */
-  background-image: url(/wp-content/themes/jeffpack-theme/assets/images/pattern/skulls.png);
+  background-image: url(/wp-content/themes/jeffpack-theme/lib/images/pattern/skulls.png);
 }
 blockquote, q {
   quotes: "" "";
@@ -414,11 +415,15 @@ button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:
   opacity: 0.4;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   color: #493631;
   background-color: #eee9db;
   border: 1px solid #b6b3a3;
   border-radius: 3px;
-  padding: 3px;
+  outline: none;
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
   color: #493631;
@@ -670,9 +675,9 @@ fieldset {
  # Widgets
  --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em 0.4em;
-  padding-left: 0.4em;
-  border-top: 1px solid #493631;
+  margin: 0.3em;
+  padding: 0.4em 0 1em 0;
+  border-bottom: 1px solid #493631;
   /* Make sure select elements fit in widgets. */
 }
 .widget select {
@@ -765,9 +770,11 @@ fieldset {
   float: left;
   margin: 0 -25% 0 0;
   width: 100%;
+  padding-right: 1%;
 }
 .site-main {
   margin: 0 25% 0 0;
+  padding-right: 1%;
 }
 .site-content .widget-area {
   float: right;
@@ -779,13 +786,12 @@ fieldset {
   width: 100%;
 }
 .site-content {
-  padding-right: 0.5%;
-  padding-left: 2%;
+  padding: 1.5%;
 }
 .site-content {
   background-color: #ddd3b6;
   padding-top: 1em;
-  background-image: url(/wp-content/themes/jeffpack-theme/assets/images/paper/otis-redding.png);
+  background-image: url(/wp-content/themes/jeffpack-theme/lib/images/paper/otis-redding.png);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.40), inset 0 0 8px 8px #ddcdb6;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.40), inset 0 0 8px 8px #ddcdb6;
   -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.40), inset 0 0 8px 8px #ddcdb6;

@@ -10,8 +10,8 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	background-image: $image__background-body; // added by Jeff-Russ
+	background: $colorbg_body; /* Fallback for when there is no custom background color defined. */
+	background-image: $imgbg_body; // added by Jeff-Russ
 }
 
 blockquote, q {
@@ -21,11 +21,11 @@ blockquote, q {
 	&:after {
 		content: "";
 	}
-	border: 1px solid $color__border-input; // added by Jeff-Russ
+	border: 1px solid $colorbd_input; // added by Jeff-Russ
 }
 
 hr {
-	background-color: $color__background-hr;
+	background-color: $colorbg_hr;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;

@@ -24,50 +24,50 @@ a[href="https://wordpress.org/"] {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	& .site-title a {
-		color: $color__background-content;
+		color: $colorbg_content;
 		text-decoration: none;
-		&:visited, &:hover, &:focus { color: $color__background-content; }
+		&:visited, &:hover, &:focus { color: $colorbg_content; }
 	}
 }
 .site-title {
 	font-size: 2rem;
-	font-family: $font__main;
+	font-family: $font_main;
 	font-weight: 900;
 }
 
-.site-description { color: $color__site-description; }
+.site-description { color: $colorfg_site-description; }
 .menu-toggle {
-	background-color: $color__background-content;
-	border: 1px solid $color__border-input;
-	color: $color__text-main;
+	background-color: $colorbg_content;
+	border: 1px solid $colorbd_input;
+	color: $colorfg_main;
 	&:hover, &:focus {
-		background-color: $color__background-input; // originally #eeefdb
-		color: $color__background-ins;
+		background-color: $colorbg_input; // originally #eeefdb
+		color: $colorbg_ins;
 	}
 	&.toggled-on, &.toggled-on:hover, &.toggled-on:focus {
-		background-color: $color__text-main;
-		color: $color__button;
+		background-color: $colorfg_main;
+		color: $colorfg_button;
 	}
 
 }
 
 .site-info {
-	a:hover, a:focus, { color: $color__background-ins; }
+	a:hover, a:focus, { color: $colorbg_ins; }
 }
 
 // .site-footer {
-//     .site-title:after { font-family: $font__main; }
+//     .site-title:after { font-family: $font_main; }
 // }
 
 .entry-content .wp-smiley,
 .entry-summary .wp-smiley,
 .comment-content .wp-smiley,
 .textwidget .wp-smiley {
-	border: 1px solid $color__border-input;
+	border: 1px solid $colorbd_input;
 }
 
 .widecolumn {
-	.mu_register .mu_alert { background-color: $color__background-content; }
-	// label, .mu_register label { font-family: $font__main; }
+	.mu_register .mu_alert { background-color: $colorbg_content; }
+	// label, .mu_register label { font-family: $font_main; }
 }
 
