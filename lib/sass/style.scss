@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
+@import "inc/functions"; // added by Jeff-Russ
 @import "mixins/mixins-master";
 /*------------------------------------------------------------*/
 

@@ -15,27 +15,46 @@ a[href="https://wordpress.org/"] {
 .site {
 	margin-right: 5%;
 	margin-left: 5%;
+	:before {
+		position: fixed;
+		left: 0; right: 0; top: 0; bottom: 0;
+		z-index: -1;
+		@include oldphoto($imgbg_body);
+		background-color: $colorbg_body;
+	}
 }
 
 .site-header {
-	padding: 1em 3%;
-}
-.site-branding {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	& .site-title a {
-		color: $colorbg_content;
-		text-decoration: none;
-		&:visited, &:hover, &:focus { color: $colorbg_content; }
+	// padding: 1em 3%;
+	margin-top: -4px;
+
+	.site-branding {
+		// margin-top: 0.5em;
+		margin-bottom: -10px; // changed from 0.5em by Jeff-Russ
+
+		.site-title {
+			display: inline-block; 
+			vertical-align: top;
+			margin-right: 1em;
+			margin-left: 0.3em;
+			a {
+				font-size: 2rem;
+				font-family: $font_main;
+				font-weight: 900;
+				color: $colorbg_content;
+				text-decoration: none;
+				&:visited, &:hover, &:focus { color: $colorbg_content; }
+			}
+		}
+		.site-description {
+			display: inline-block;
+			vertical-align: top;
+			// margin-top: 5px;
+			color: $colorfg_site-description;
+		}
 	}
 }
-.site-title {
-	font-size: 2rem;
-	font-family: $font_main;
-	font-weight: 900;
-}
 
-.site-description { color: $colorfg_site-description; }
 .menu-toggle {
 	background-color: $colorbg_content;
 	border: 1px solid $colorbd_input;

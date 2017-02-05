@@ -22,3 +22,59 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// everything below added by Jeff
+
+@mixin box-shadow($box-shadow...) {
+	-webkit-box-shadow: $box-shadow;
+	   -moz-box-shadow: $box-shadow;
+	     -o-box-shadow: $box-shadow;
+	        box-shadow: $box-shadow;
+}
+
+@mixin border-radius($radius: 1vmax) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	     -o-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin filter($arg) {
+	-webkit-filter: unquote($arg);
+	   -moz-filter: unquote($arg);
+	     -o-filter: unquote($arg);
+	    -ms-filter: unquote($arg);
+	        filter: unquote($arg);
+}
+
+@mixin oldphoto($image, $before: false){
+	background-image: linear-gradient( to bottom,
+		rgba(55,55,55,0.0) 0%,
+		rgba(55,55,55,0.3) 50%, 
+		rgba(128,100,128,0.4) 90%, 
+		rgba(100,110,120,0.2) 100% ), $image;
+	@include box-shadow(inset 0 0 100px rgba(44,44,44,1));
+	@include filter(blur(1px) sepia(15%));
+}
+
+// elevate creates shadows and inner edge fades with automatic coloring.
+// $shadow sets the size of the outer shadow and can be a single value
+// or, for angled shadows $shadow can be 20px -10px 12px, for example.
+// $inner with positive value, lightens inner edges, negative darkens
+// and if negative, darkens them. 0 would prevent both.
+// Either parameter can be any unit but should be valued similar to px
+@mixin elevate($shadow: 30px, $inner: 20px) {
+	$len: length($shadow); $size: nth($shadow, $len);
+	@if ($len == 1) { $shadow: 0 0 $shadow; }
+	$shadow: $shadow $size/3 rgba(20, 24, 0, sigma_curve($size));
+
+	@if $inner != 0 {
+	$size: abs($inner); $amt: sigma_curve($size*10);
+	$color: rgba(135, 117, 100, $amt);
+	@if $inner>0 { $color: lighten($color, $amt*50%); }
+	@else        { $color:  darken($color, $amt*50%); }
+	  @include box-shadow($shadow, inset 0 0 $size $size/3 $color);
+	} @else {
+		@include box-shadow($shadow);
+	}
+}

@@ -10,8 +10,8 @@ html {
 }
 
 body {
-	background: $colorbg_body; /* Fallback for when there is no custom background color defined. */
-	background-image: $imgbg_body; // added by Jeff-Russ
+	background: $colorbg_body; // Fallback for when there is no custom background color defined.
+	// background-image: $imgbg_body; // added by Jeff-Russ
 }
 
 blockquote, q {

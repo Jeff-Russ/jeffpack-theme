@@ -1,23 +1,13 @@
 
 // file added by Jeff-Russ
 
-
 .site-content {
 	padding: 1.5%;
-}
 
-.site-content {
 	background-color: $colorbg_content;
-	padding-top: 1em;
 	background-image: $imgbg_content;
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
-	-o-box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
-	box-shadow: 0 0 10px rgba(0,0,0,0.40), inset 0 0 8px 8px $color__tint-content;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
+	@include border-radius(6px);
+	@include elevate();
 }
 
 

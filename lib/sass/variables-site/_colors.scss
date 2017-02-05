@@ -13,6 +13,7 @@ $colorfg_button: #0a5575;
 $colorbg_body: $colorfg_main;  // Fallback for when there is no custom background color defined.
 $colorbg_content: #ddd3b6;
 
+
 $color__tint-content: adjust-hue($colorbg_content, -10deg); // delete this later
 
 $colorbg_input: #eee9db;

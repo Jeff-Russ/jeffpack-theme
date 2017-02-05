@@ -1,0 +1,21 @@
+
+// file added by Jeff
+
+// strip units off of value
+@function strip-unit($val) {
+	@if type-of($val)=='number' and not unitless($val) {
+		@return $val / ($val * 0 + 1);
+	}
+	@return $val;
+}
+
+// Return is a float approaching -/+1, never reaching it.
+// If both input $val and $half are -/+20, the output is -/+0.5
+// In other words, $half dicates what point is "half power."
+// If you have a low input and you want to increase out, raise $half.
+@function sigma_curve($val, $half: 30) {
+	@if type-of($val)=='number' and not unitless($val) {
+		$val: $val / ($val * 0 + 1);
+	}
+	@return $val / ( abs($val) + ($half / 1) );
+}

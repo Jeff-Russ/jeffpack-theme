@@ -1,8 +1,9 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	float: right; // changed from left by Jeff-Russ
 	width: 100%;
+	position: relative; // added by Jeff-Russ
 
 	ul {
 		display: none;
@@ -13,7 +14,7 @@
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
-			position: absolute;
+			position: relative;
 			top: 1.5em;
 			left: -999em;
 			z-index: 99999;
@@ -30,7 +31,9 @@
 	}
 
 	li {
-		float: left;
+		border-top: 1px solid $colorbg_hr; 
+		padding: 0 1em 0 1em; // added by Jeff-Russ
+		float: right; // changed from left by Jeff-Russ
 		position: relative;
 		&:hover > a, &.focus > a { }
 	}
